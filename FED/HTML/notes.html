@@ -1,0 +1,280 @@
+<!--
+#HTML基础 
+    #标签 
+        #开始标签常被称为起始标签(opening tag) 结束标签常称为闭合标签(closing tag)
+        #HTML 元素以开始标签起始
+        #HTML 元素以结束标签终止
+        #元素的内容是开始标签与结束标签之间的内容
+        #某些 HTML 元素具有空内容(empty content)
+        #空元素在开始标签中进行关闭(以开始标签的结束而结束)
+        #大多数 HTML 元素可拥有属性
+        #标识 文本开头应有这个标签标明此文档是html文档
+            #<!DOCTYPE html>
+        #网页内容 <html> 元素定义了整个 HTML 文档
+            #<html></html>
+    #属性 
+        #HTML 元素可以设置属性
+        #属性可以在元素中添加附加信息
+        #属性一般描述于开始标签
+        #属性总是以名称/值对的形式出现 比如 name="value"
+#HTML标签集锦 
+    #页面标签
+        # 注释 
+        # 版本声明  <!DOCTYPE>
+        # 独立框架边栏  <aside> </aside>
+            #<aside> 标签定义了它所在内容之外的一些内容, 通常作为侧边栏放置在文档中
+        # 头部标签  <head> </head>
+            #<head> 元素是所有头部元素的容器
+            #<head> 元素必须包含文档的标题(title)，可以包含脚本 样式 meta 信息 以及其他更多的信息
+            #以下列出的元素能被用在 <head> 元素内部 <title> (在头部中，这个元素是必需的) <style> <base> <link> <meta> <script> <noscript>
+        # 主体 <body> </body>
+            #<body> 标签定义文档的主体
+            #HTML 文档的元数据和文档信息包装在 head 元素中 文档的内容则包装在 body 元素中
+            #body 元素总是紧跟在 head 元素之后 它是 html 元素的第二个子元素
+            #<body> 元素包含 HTML 文档的所有内容 例如标题  段落  图像  超链接  表格  列表等
+            #一个 HTML 文档中只能有一个 <body> 元素
+        # 区块标签  <div> </div>
+            #<div> 标签定义 HTML 文档中的一个分隔区块或者一个区域部分
+            #<div>标签常用于组合块级元素，以便通过 CSS 来对这些元素进行格式化
+        # 页脚标签  <footer> </footer>
+            #<footer> 标签定义文档或者文档的一部分区域的页脚
+            #<footer> 元素应该包含它所包含的元素的信息
+            #在典型情况下，该元素会包含文档创作者的姓名  文档的版权信息  使用条款的链接  联系信息等等
+        # 页眉标签  <header> </header>
+            #<header> 标签定义文档或者文档的一部分区域的页眉
+            #<header> 元素应该作为介绍内容或者导航链接栏的容器
+            #在一个文档中，您可以定义多个 <header> 元素
+            #<header> 标签不能被放在 <footer> <address> 或者另一个 <header> 元素内部
+        # 标题分组标签  <hgroup> </hgroup>
+            #<hgroup> 标签被用来对标题元素进行分组
+            #当标题有多个层级(副标题)时 <hgroup> 元素被用来对一系列 <h1> - <h6> 元素进行分组
+        # 标题标签  <h1> </h1> - <h6> </h6>
+            #<h1> - <h6> 标签被用来定义 HTML 标题
+            #<h1> 定义重要等级最高的标题。<h6> 定义重要等级最低的标题
+    #预设置标签
+        # 链接基准  <base> </base>
+            #属性 
+                # href	    URL	规定页面中所有相对 URL 的基本 URL
+                # target	规定页面中所有超链接和表单的默认目标
+            #<base> 标签规定文档中所有相对 URL 的基准 URL 和/或目标
+            #通常情况下 浏览器会从当前文档的 URL 中提取相应的元素来填写相对 URL 中的空白
+            #使用 <base> 标签可以改变这一点 浏览器随后将不再使用当前文档的 URL 而使用指定的基本 URL 来解析所有的相对 URL 这其中包括 <a>  <img>  <link>  <form> 标签中的 URL
+            #<base> 标签必须具有 href 或 target 属性 或两者都有
+            #一份文档中只能有一个 <base> 元素 而且它必须位于 <head> 元素 内部 它通常是 head 元素中位置最靠前的子元素之一 以便随后的元数据元素中的相对 URL 可以用上其设置的基准 URL
+    #内容标签
+        # 换行符 <br/>
+            #<br> 标签插入单行换行符
+            #使用 <br> 标签来插入换行符 而不是用它来增加段落之间的空白
+        # 横分割线 <hr/>
+            #<hr> 标签定义 HTML 页面中的主题变化(比如话题的转移) 并显示为一条水平线
+            #<hr> 元素被用来分隔 HTML 页面中的内容(或者定义一个变化)
+        # 长引用  <blockquote> </blockquote>
+            #属性 
+                # cite      规定引用的来源
+            #<blockquote> 标签规定从其他来源引用的部分 
+            #浏览器通常会缩进 <blockquote> 元素(用css删除缩进)
+            #<blockquote> 标签定义的是块引用, 其间的所有文本都会从常规文本中分离出来 经常会在左  右两边进行缩进(增加外边距) 而且有时会使用斜体
+            #块引用拥有它们自己的空间
+        # 内联框架标签 <iframe> </iframe>
+            #属性
+                #height	                                                                            规定 <iframe> 的高度
+                #name	                                                                            规定 <iframe> 的名称
+                #sandbox	(""|allow-forms|allow-same-origin|allow-scripts|allow-top-navigation)	对 <iframe> 的内容定义一系列额外的限制
+                seamless	                                                                        规定 <iframe> 看起来像是父文档中的一部分
+                src	                                                                                规定在 <iframe> 中显示的文档的 URL
+                srcdoc   	                                                                        规定页面中的 HTML 内容显示在 <iframe> 中
+                width		                                                                        规定 <iframe> 的宽度
+            #<iframe> 标签规定一个内联框架
+            #一个内联框架被用来在当前 HTML 文档中嵌入另一个文档
+        # 绘图标签  <canvas> </canvas>
+            #属性 
+                #height	像素值	规定画布的高度 默认值为 150
+                #width	像素值	规定画布的宽度 默认值为 300
+            #<canvas> 标签通常通过脚本(通常是 JavaScript)实时绘制图形
+            #<canvas> 标签是透明的 它只是图形的容器 必须使用脚本才能实际绘制图形
+            #在禁用 JavaScript 的浏览器和不支持 <canvas> 的浏览器中 会显示出 <canvas> 元素内部的任何文本
+        # 独立文章  <article> </article>
+            #<article> 标签规定独立的  自包含的内容 
+            #一篇文章应该能够独立理解 且可以独立于整个站点进行分发 
+            #<articel> 元素的潜在来源包括 论坛帖子  博客文章  新闻报道  用户评论
+        # 音频  <audio> </audio>
+            #属性 
+                # autoplay  规定音频将在准备就绪后立即开始播放
+                # controls  规定应显示音频控件(例如播放/暂停按钮等)
+                # loop      规定音频将在每次结束后重新开始
+                # muted   	规定音频输出应静音
+                # preload	规定是否以及如何在页面加载时加载音频
+                    # auto
+                    # metadata
+                    # none
+                # src       规定音频文件的 URL
+            #<audio> 标签用于在文档中嵌入声音内容 例如音乐或其他音频流
+            #<audio> 标签可包含一个或多个拥有不同音频源的 <source> 标签 浏览器将选择它支持的第一个源
+            #<audio> 和 </audio> 标签之间的文本只会在不支持 <audio> 元素的浏览器中显示
+        # 缩写  <abbr> </abbr>
+            #属性   <abbr title = "WholeName"> </abbr>
+            #标签定义缩写词或首字母缩写词 当鼠标悬停在元素上时 使用全局 title 属性可显示对缩写词/首字母缩略词的描述
+        # 联系信息  <address> </address>
+            #通常连同其他信息被包含在 <footer> 元素中 信息可以是电子邮件地址  URL  实际地址  电话号码  社交媒体账号等
+            #如果 <address> 元素位于 <body> 元素内 则它表示文档联系信息
+            #如果 <address> 元素位于 <article> 元素内 则它表示文章的联系信息
+    #交互标签
+        # 按钮标签  <button>
+            #属性 
+                #type   规定按钮的类型
+                    #button	该按钮是可点击的按钮
+                    #submit	该按钮是提交按钮(提交表单数据)
+                    #reset	该按钮是重置按钮(将表单数据重置为其初始值)
+                #autofocus              规定按钮应在页面加载时自动获得焦点 
+                #disabled	            规定应禁用按钮 
+                #form                   规定按钮属于哪个表单
+                #formaction	            规定提交表单时将表单数据发送到哪里 仅适用于 type="submit"
+                #formenctype	        规定在将表单数据发送到服务器之前应如何对其进行编码 仅适用于 type="submit"
+                    #application/x-www-form-urlencoded
+                    #multipart/form-data
+                    #text/plain
+                #formmethod	            规定如何发送表单数据(使用哪种 HTTP 方法) 仅适用于 type="submit"
+                    #get
+                    #post
+                #formnovalidate         规定不应在提交时验证表单数据 仅适用于 type="submit"
+                #formtarget             框架名称 规定在提交表单后响应应该显示在哪里 仅适用于 type="submit"
+                    #_blank
+                    #_self
+                    #_parent
+                    #_top
+                #name                   规定按钮的名称
+                #popovertarget          规定要调用的弹出窗口元素
+                #popovertargetaction    规定按钮被点击时对弹出窗口元素的操作
+                    #hide
+                    #show
+                    #toggle
+                #value                  规定按钮的初始值
+            #<button> 标签定义可点击的按钮
+            #在 <button> 元素内部 您可以放置文本(以及像 <i>  <b>  <strong>  <br>  <img> 等标签)这是用 <input> 元素创建的按钮所不能做到的
+            #请始终为 <button> 元素指定 type 属性 以告知浏览器它是什么类型的按钮
+        # 窗口标签  <dialog> </dialog>
+            #属性 
+                # open  规定 dialog 元素是有效的 用户可以与它进行交互
+            #<dialog> 标签定义一个对话框  确认框或窗口
+        # 注释标签  <details> </details>
+            #属性 
+                # open      open 属性是一个 boolean(布尔)属性 规定在 HTML 页面上 details 应该是可见的
+            #<details> 标签规定了用户可见的或者隐藏的需求的补充细节
+            #<details> 标签用来供用户开启关闭的交互式控件 任何形式的内容都能被放在 <details> 标签里边
+            #<details> 元素的内容对用户是不可见的 除非设置了 open 属性
+        # 链接  <a> </a>
+            #属性   <a href = "url" target = "targetType" title = "hint"> </a>
+            #打开另一页面 
+                # <a href = "url" target = "targetType" > </a>
+                # target属性 
+                    #   _blank  新标签页内打开
+                    #   _self   在与点击相同的框架中打开链接的文档
+            #跳转到本文档不同部分 
+                # <a id = "section" > </a>
+                # <a href = "#section" > </a>
+            #下载文件 
+                # <a href = "url" download> </a>
+            #运行js代码 
+                # <a href="javascript BLOCK;"> </a>
+    #图像标签
+        # 图像特定区域  <area> </area>
+            #属性   <area alt = "text" coords = "coord" download = "url" shape = "shape" target = "targetType"> </area>
+                # alt       规定区域的替代文本 如果存在 href 属性则为必需
+                # coords    规定区域的坐标
+                # download  规定当用户单击超链接时将下载目标
+                # shape     rect, circle, default, poly
+                # target    见<a>
+            #标签定义图像映射内的区域(图像映射是带有可点击区域的图像 也就是客户端的分区响应图 元素始终嵌套在 <map> 标签内
+        # 图像标记标题标签  <figcaption> </figcaption>
+            #<figcaption> 标签为 <figure> 元素定义标题
+            #<figcaption> 元素应该被置于 <figure> 元素的第一个或最后一个子元素的位置
+        # 图像标记标签  <figure> </figure>
+            #<figure> 标签规定独立的流内容(图像  图表  照片  代码等等)
+            #<figure> 元素的内容应该与主内容相关 同时元素的位置相对于主内容是独立的 如果被删除，则不应对文档流产生影响
+    #描述列表
+        # 描述列表描述标签  <dd> </dd>
+            #属性 
+                # cite	    规定一个解释了文本被删除的原因的文档的 URL
+                # datetime	规定文本被删除的日期和时间
+            #标签被用来对一个描述列表中的项目/名字进行描述
+            #<dd> 标签与 <dl>  (定义一个描述列表)和 <dt>  (定义项目/名字)一起使用
+            #在 <dd> 标签内 您能放置段落 换行 图片 链接 列表等等
+        # 描述列表列表标签  <dl> </dl>
+            #<dl> 标签定义一个描述列表
+            #<dl> 标签与 <dt> (定义项目/名字)和 <dd> (描述每一个项目/名字)一起使用
+        # 描述列表项目标签  <dt> </dt>
+            #<dt> 标签定义一个描述列表的项目/名字
+            #<dt> 标签与 <dl> (定义一个描述列表)和 <dd> (描述每一个项目/名字)一起使用
+    #短语标签
+        # 斜体标签  <dfn> </dfn>
+            #<dfn>标签是一个短语标签，用来定义一个定义项目 看上去有点斜体
+        # 强调文本标签  <em> </em>
+            #<em> 标签是一个短语标签，用来呈现为被强调的文本 看上去有些斜体
+        # 加粗文本  <b> </b>
+            #<b> 标签规定没有任何额外重要性的粗体文本
+            #根据 HTML5 规范 <b>标签应该是最后的选择 只有在没有更合适的标签时才使用 
+            #应使用 <h1 >到 <h6> 标签表示标题 使用 <em> 标签表示强调文本 使用 <strong> 标签表示重要文本 使用 <mark> 标签表示被标记的/高亮文本
+        # 倾斜文本 <i> </i>
+            #<i> 定义与文本中其余部分不同的部分，并把这部分文本呈现为斜体文本
+            #<i> 标签被用来表示科技术语、其他语种的成语俗语、想法、宇宙飞船的名字等等
+            #在没有其他适当语义的元素可以使用时，请使用 <i> 元素。其他语义的元素如下
+        # 标题标签  <cite> </cite>
+            #<cite> 标签定义创意作品的标题(例如书籍  诗歌  歌曲  电影  绘画  雕塑等)
+            #<cite> 标签通常表示它所包含的文本对某个参考文献的引用 比如书籍或者杂志的标题
+            #按照惯例 引用的文本将以斜体显示
+            #用 <cite> 标签把指向其他文档的引用分离出来 尤其是分离那些传统媒体中的文档 如书籍  杂志  期刊 等等
+        # 等宽字体标签  <code> </code>
+            #<code> 标签用于定义计算机代码片段 其内容以浏览器默认的等宽字体显示
+        # 双向隔离标签  <bdi> </bdi>
+            #BDI 指的是双向隔离(Bi-Directional Isolation)
+            #<bdi> 标签隔离了一部分文本 这部分文本可能在方向上与外部其他文本不同
+            #当嵌入用户生成的具有未知文本方向的内容时 这个元素是非常有用的
+        # 双向覆盖标签  <bdo> </bdo>
+            #属性 
+                # dir	    必需 规定 <bdo> 元素内文本的文本方向
+                    # ltr
+                    # rtl
+            #BDO 指的是双向覆盖(Bi-Directional Override)
+            #<bdo> 标签用于覆盖当前的文本方向
+    #表格标签
+        # 表格列属性标签  <col/>
+            #属性 
+                # span	    规定 <col> 元素应跨越的列数
+            #<col> 标签为表格中一个或多个列定义属性值
+        # 表格列组属性标签  <colgroup> </colgroup>
+            #属性 
+                # span	    规定 <colgroup> 元素应跨越的列数
+            #<colgroup> 标签用于规定表格中包含一列或多列的分组的格式
+            #如需对全部列应用样式 <colgroup> 标签很有用 这样就不需要对各个单元和各行重复应用样式了
+            #<colgroup> 标签必须是 <table> 元素的子元素 位于任何 <caption> 元素之后和任何 <thead>  <tbody>  <tfoot> 和 <tr> 元素之前
+            #如需为 <colgroup> 中的某一列定义不同的属性 请在 <colgroup> 标签中使用 <col> 标签
+        # 表格标题标签  <captive> </captive>
+            #<caption> 标签定义表格标题
+            #caption 标签必须紧随 table 标签之后 您只能对每个表格定义一个标题
+            #默认情况下 表格标题将在表格上方居中对齐 但是 CSS 属性 text-align 和 caption-side 可用于对齐和放置标题
+    #表单
+        # 表单标签  <form> </form>
+            #属性 
+                # accept-charset 	                    规定服务器可处理的表单数据字符集 
+                # action	(URL)	                    规定当提交表单时向何处发送表单数据 
+                # autocomplete(on|off)                  规定是否启用表单的自动完成功能 
+                # enctype	                            规定在向服务器发送表单数据之前如何对其进行编码 (适用于 method="post" 的情况)
+                # method(get|post)	                    规定用于发送表单数据的 HTTP 方法 
+                # name                                  规定表单的名称 
+                # novalidate	        	            如果使用该属性，则提交表单时不进行验证 
+                # target(_blank|_self|_parent|_top)	    规定在何处打开 action URL
+            #<form> 标签用于创建供用户输入的 HTML 表单
+            #<form> 元素包含一个或多个如下的表单元素 <input> <textarea> <button> <select> <option> <optgroup> <fieldset> <label>
+        # 表单分组标签  <fieldset> </fieldset>
+            #属性 
+                # disabled	规定该组中的相关表单元素应该被禁用
+                # name      规定 fieldset 的名称
+            #<fieldset> 标签可以将表单内的相关元素分组
+            #<fieldset> 标签会在相关表单元素周围绘制边框
+        # 选项列表标签  <datalist> </datalist>
+            #属性 
+                # id    与input元素的list属性值相同用于绑定
+            #<datalist> 标签规定了 <input> 元素可能的选项列表
+            #<datalist> 标签被用来在为 <input> 元素提供"自动完成"的特性 用户能看到一个下拉列表 里边的选项是预先定义好的 将作为用户的输入数据
+            #使用 <input> 元素的 list 属性来绑定 <datalist> 元素
+-->
